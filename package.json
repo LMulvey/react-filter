@@ -1,0 +1,52 @@
+{
+  "name": "react-filter",
+  "version": "0.0.1",
+  "description": "Filter data collections in React without any hassle 👌",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "storybook": "start-storybook -c storybook/.storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMulvey/react-filter.git"
+  },
+  "keywords": [
+    "react",
+    "filter",
+    "collections",
+    "filtering",
+    "search",
+    "query",
+    "filterable",
+    "sifterjs",
+    "sifter",
+    "list",
+    "listview",
+    "rendering"
+  ],
+  "author": "Lee Mulvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LMulvey/react-filter/issues"
+  },
+  "homepage": "https://github.com/LMulvey/react-filter#readme",
+  "devDependencies": {
+    "@babel/core": "7.3.4",
+    "@storybook/addon-info": "5.0.1",
+    "@storybook/react": "5.0.1",
+    "@types/jest": "24.0.11",
+    "@types/storybook__react": "4.0.1",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-loader": "8.0.5",
+    "jest": "24.5.0",
+    "react-docgen-typescript-loader": "3.0.1",
+    "react-docgen-typescript-webpack-plugin": "1.1.0",
+    "ts-jest": "24.0.0",
+    "typescript": "3.3.3333"
+  },
+  "dependencies": {
+    "react": "16.8.4",
+    "react-dom": "16.8.4"
+  }
+}
