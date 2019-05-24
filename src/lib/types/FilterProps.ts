@@ -1,6 +1,6 @@
-import FilterPayload from "./FilterPayload";
+import FilteredData from "./FilteredData";
 
 export default interface FilterProps {
-  children(filterPayload: FilterPayload): Array<any>;
+  children(filteredData: FilteredData): Array<any>;
   data: Array<any>;
 }

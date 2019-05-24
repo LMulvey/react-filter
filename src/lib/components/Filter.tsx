@@ -1,9 +1,9 @@
-import * as React from "react";
-import FilterProps from "../types/FilterProps";
+import * as React from 'react';
+import FilterProps from '../types/FilterProps';
 
 class Filter extends React.Component<FilterProps> {
   static defaultProps = {
-    data: []
+    data: [],
   };
 
   render() {
