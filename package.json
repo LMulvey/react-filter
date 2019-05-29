@@ -46,6 +46,7 @@
     "typescript": "3.3.3333"
   },
   "dependencies": {
+    "@types/styled-components": "4.1.8",
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "styled-components": "4.2.0"
