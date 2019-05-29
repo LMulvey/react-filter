@@ -1,3 +1,3 @@
 export default interface FilteredData {
-  filteredData: Array<any>;
+  filteredData: any[];
 }

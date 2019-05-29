@@ -5,7 +5,7 @@ import { mockData } from '../data/mockData';
 
 storiesOf('react-filter|Default', module).add('default render', () => (
   <Filter data={mockData}>
-    {({ filteredData }) => (
+    {({ filteredData }): React.ReactNode => (
       <Table>
         <thead>
           <tr>
@@ -16,14 +16,16 @@ storiesOf('react-filter|Default', module).add('default render', () => (
           </tr>
         </thead>
         <tbody>
-          {filteredData.map(item => (
-            <tr>
-              <td>{item.first_name}</td>
-              <td>{item.last_name}</td>
-              <td>{item.email}</td>
-              <td>{item.city}</td>
-            </tr>
-          ))}
+          {filteredData.map(
+            (item): React.ReactNode => (
+              <tr key={item.id || btoa(item.firstName)}>
+                <td>{item.firstName}</td>
+                <td>{item.lastName}</td>
+                <td>{item.email}</td>
+                <td>{item.city}</td>
+              </tr>
+            )
+          )}
         </tbody>
       </Table>
     )}

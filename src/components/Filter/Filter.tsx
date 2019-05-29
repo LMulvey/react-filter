@@ -3,7 +3,7 @@ import FilterProps from '../../lib/types/FilterProps';
 
 class Filter extends React.Component<FilterProps> {
   static defaultProps = {
-    data: [],
+    data: []
   };
 
   render() {

@@ -4,7 +4,7 @@ import DropdownProps from 'lib/types/DropdownProps';
 
 class Dropdown extends React.Component<DropdownProps> {
   static defaultProps = {
-    options: [],
+    options: []
   };
 
   render() {

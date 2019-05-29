@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
 export default interface TableProps {
-  children: ReactNode
-};
+  children: ReactNode;
+}
