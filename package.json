@@ -78,5 +78,8 @@
   "peerDependencies": {
     "react": "16.8.4",
     "react-dom": "16.8.4"
+  },
+  "dependencies": {
+    "sifter": "0.5.3"
   }
 }
