@@ -1,14 +1,14 @@
 import { ReactNode } from 'react';
 
-export interface DataObject {
+export interface FilteredDataObject {
   [key: string]: string | number;
 }
 
 export interface FilterPayload {
-  filteredData: DataObject[];
+  filteredData: FilteredDataObject[];
 }
 
 export default interface FilterProps {
   children(filterPayload: FilterPayload): ReactNode;
-  inputData: DataObject[];
+  inputData: FilteredDataObject[];
 }
