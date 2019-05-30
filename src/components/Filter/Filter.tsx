@@ -3,12 +3,12 @@ import FilterProps from '../../lib/types/FilterProps';
 
 class Filter extends React.Component<FilterProps> {
   static defaultProps = {
-    data: []
+    inputData: []
   };
 
   render() {
-    const { children, data } = this.props;
-    return children({ filteredData: data });
+    const { children, inputData } = this.props;
+    return children({ filteredData: inputData });
   }
 }
 
