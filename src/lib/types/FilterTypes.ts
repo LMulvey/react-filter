@@ -26,8 +26,8 @@ export interface FilterSifterCollection {
 
 export interface SifterOptions {
   fields: string[];
-  sort: any[];
-  limit: number;
+  sort?: any[];
+  limit?: number;
 }
 
 export interface SifterToken {
