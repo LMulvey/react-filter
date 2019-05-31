@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Filter, Table } from '../../src/index';
 import { mockData } from '../data/mockData';
-import { FilterPayload } from '../../src/lib/types/FilterProps';
+import { FilterPayload } from '../../src/lib/types/FilterTypes';
 
 storiesOf('react-filter|Default', module).add('default render', () => (
   <Filter inputData={mockData}>

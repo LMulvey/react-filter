@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "paths": { "*": ["lib/types/*"] },
+    "typeRoots": ["./node_modules/@types/", "./src/lib/@types/"],
     "outDir": "build/lib",
     "module": "commonjs",
     "target": "es5",
