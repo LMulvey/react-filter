@@ -2,6 +2,8 @@ import * as React from 'react';
 import FilterProps, { FilteredDataObject, FilterState } from '../../lib/types/FilterTypes';
 import { siftInputData } from '../../lib/helpers';
 
+const RELEVANCY = false;
+
 class Filter extends React.Component<FilterProps, FilterState> {
   static defaultProps = {
     inputData: [],
@@ -21,7 +23,9 @@ class Filter extends React.Component<FilterProps, FilterState> {
     }
 
     const siftedData = siftInputData({ inputData, inputQuery, searchProperties });
-    return siftedData;
+
+    if (RELEVANCY) return siftedData.sortedByRelevancy;
+    return inputData.filter(siftedData.filterFn);
   }
 
   updateInputQuery = (event: React.ChangeEvent<HTMLInputElement>): void => {

@@ -17,6 +17,7 @@ module.exports = {
     }
   },
   rules: {
-    '@typescript-eslint/explicit-member-accessibility': 'off'
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/camelcase': 'off'
   }
 };

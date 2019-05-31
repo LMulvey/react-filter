@@ -18,6 +18,11 @@ export default interface FilterProps {
   readonly searchProperties: string[];
 }
 
+export interface SiftedDataObject {
+  sortedByRelevancy: SifterItem[];
+  filterFn(item: FilteredDataObject, index: number): FilteredDataObject[];
+}
+
 export interface FilterSifterCollection {
   readonly inputData: FilteredDataObject[];
   readonly searchProperties: string[];
@@ -28,6 +33,9 @@ export interface SifterOptions {
   fields: string[];
   sort?: any[];
   limit?: number;
+  nesting?: boolean;
+  conjunction?: string;
+  respect_word_boundaries?: boolean;
 }
 
 export interface SifterToken {
