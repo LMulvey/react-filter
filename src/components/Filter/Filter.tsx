@@ -1,10 +1,11 @@
 import * as React from 'react';
-import Sifter = require('sifter');
-import FilterProps, { FilteredDataObject, FilterState, SifterItem } from '../../lib/types/FilterTypes';
+import FilterProps, { FilteredDataObject, FilterState } from '../../lib/types/FilterTypes';
+import { siftInputData } from '../../lib/helpers';
 
 class Filter extends React.Component<FilterProps, FilterState> {
   static defaultProps = {
-    inputData: []
+    inputData: [],
+    searchProperties: []
   };
 
   state = {
@@ -12,19 +13,15 @@ class Filter extends React.Component<FilterProps, FilterState> {
   };
 
   filterTheData(): FilteredDataObject[] {
-    const { inputData } = this.props;
+    const { inputData, searchProperties } = this.props;
     const { inputQuery } = this.state;
 
     if (!inputQuery) {
       return inputData;
     }
 
-    const sift = new Sifter(inputData);
-    const siftResults = sift.search(inputQuery, {
-      fields: ['firstName', 'lastName', 'city']
-    }).items;
-    const resultIndexes = siftResults.map((item: SifterItem) => item.id);
-    return resultIndexes.map((index: number) => inputData[index]);
+    const siftedData = siftInputData({ inputData, inputQuery, searchProperties });
+    return siftedData;
   }
 
   updateInputQuery = (event: React.ChangeEvent<HTMLInputElement>): void => {

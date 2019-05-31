@@ -4,8 +4,10 @@ import { Filter, Table } from '../../src/index';
 import { mockData } from '../data/mockData';
 import { FilterPayload } from '../../src/lib/types/FilterTypes';
 
-storiesOf('react-filter|Default', module).add('default render', () => (
-  <Filter inputData={mockData}>
+const mockDataProperties: string[] = Object.keys(mockData[0]);
+
+storiesOf('react-filter|Filter Component', module).add('default usage', () => (
+  <Filter inputData={mockData} searchProperties={mockDataProperties}>
     {({ filteredData }: FilterPayload): React.ReactNode => (
       <Table>
         <thead>

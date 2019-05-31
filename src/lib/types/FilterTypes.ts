@@ -14,7 +14,14 @@ export interface FilterPayload {
 
 export default interface FilterProps {
   children(filterPayload: FilterPayload): ReactNode;
-  inputData: FilteredDataObject[];
+  readonly inputData: FilteredDataObject[];
+  readonly searchProperties: string[];
+}
+
+export interface FilterSifterCollection {
+  readonly inputData: FilteredDataObject[];
+  readonly searchProperties: string[];
+  readonly inputQuery: string;
 }
 
 export interface SifterOptions {
